@@ -12,11 +12,11 @@
 
     &__total{
         font-weight: bold;
-        font-size: 1.5rem;
         text-align: right;
         margin: 1rem 1rem;
-
+        
         span:nth-child(2){
+            font-size: 1.5rem;
             color: pal.$primary-color-dark;
         }
     }
