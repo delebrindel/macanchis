@@ -1,0 +1,19 @@
+@use '../../globalStyles/palette' as pal;
+@use '../../globalStyles/breakpoints' as br;
+ 
+.navbar-wrapper {
+  background: pal.$primary-color-dark;
+  min-width: 100%;
+  padding: 0.5rem 0;
+  color: pal.$white;
+  font-size: 1.25rem;  
+  h1{
+    margin-left: 2rem;
+    display: inline-block;
+    width: 60%;
+  
+    @include br.media(">=tablet"){
+      width: 80%;
+    }
+  }
+ }

@@ -1,0 +1,32 @@
+@use '../../globalStyles/breakpoints' as br;
+
+.backdrop{
+  display: block;
+  background: rgba(0,0,0,0.8);
+  z-index: 2;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.modal{
+  margin: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border-radius: 1rem;
+
+  @include br.media(">=tablet"){
+    width: 80vw;
+  }
+
+  @include br.media(">=large"){
+    width: 60vw;
+  }
+}

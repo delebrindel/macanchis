@@ -1,0 +1,28 @@
+@use '../../../globalStyles/palette' as pal;
+@use '../../../globalStyles/breakpoints' as br;
+
+.meals-list__item {
+  list-style: none;
+  font-size: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid pal.$medium-grey;
+
+  &__text{
+    display: inline-block;
+    width: 70%;
+
+    @include br.media(">=tablet"){
+      width: 60%;
+    }
+  }
+
+  &__description{
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  &__price{
+    font-weight: bold;
+    color: pal.$primary-color-dark;
+  }
+}

@@ -1,0 +1,31 @@
+@use '../../globalStyles/palette' as pal;
+@use '../../globalStyles/breakpoints' as br;
+
+.form-control{
+  label{
+    display: inline-block;
+    width: 60%;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+
+    @include br.media(">=tablet"){
+      width: 60%;
+      text-align: right;
+      margin-right: 5%;
+    }
+  }
+  input{
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    border-radius: 0.5rem;
+    border: 1px solid pal.$light-grey;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+
+    @include br.media(">=tablet"){
+      width: 25%;
+    }
+  }
+}

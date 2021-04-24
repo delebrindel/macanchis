@@ -1,0 +1,19 @@
+@use '../../globalStyles/palette' as pal;
+@use '../../globalStyles/breakpoints' as br;
+
+.intro-wrapper{
+  margin: 2rem auto;
+  background: pal.$dark-grey;
+  color: pal.$white;
+  text-align: center;
+  padding: 1.5rem;
+  width: 80%;
+  
+  @include br.media(">=tablet", "<large"){
+    width: 70%;
+  }
+  
+  @include br.media(">=large"){
+    width: 60vw;
+  }
+}

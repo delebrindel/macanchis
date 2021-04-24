@@ -1,0 +1,15 @@
+@use '../../globalStyles/palette' as pal;
+@use '../../globalStyles/breakpoints' as br;
+.meal-selector{
+  background: pal.$white;
+  padding: 0.5rem;
+  width: 95%;
+  margin: 1rem auto;
+  
+  
+  
+  @include br.media(">=tablet"){
+    width: 80%;
+    padding: 1rem 2rem;
+  }
+}

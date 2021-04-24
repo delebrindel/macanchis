@@ -1,0 +1,26 @@
+@use '../../../globalStyles/palette' as pal;
+@use '../../../globalStyles/breakpoints' as br;
+
+.meals-list__item__form {
+  width: 20%;
+  display: inline-block;
+
+  @include br.media(">=tablet"){
+    width: 35%;
+    text-align: right;
+  }
+
+  .error-message{
+    color: pal.$alert;
+    font-weight: bold;
+  }
+
+  button{
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: pal.$white;
+    background: pal.$secondary-color;
+    font-weight: bold;
+  }
+}
