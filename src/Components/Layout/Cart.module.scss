@@ -1,0 +1,38 @@
+@use '../../globalStyles/palette' as pal;
+
+.cart{
+    &__list{
+        max-height: 400px;
+        overflow-y: scroll;
+
+        ul{
+            list-style: none;
+        }
+    }
+
+    &__total{
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: right;
+        margin: 1rem 1rem;
+
+        span:nth-child(2){
+            color: pal.$primary-color-dark;
+        }
+    }
+
+    &__actions{
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+        button{
+            background: pal.$secondary-color;
+            color: pal.$white;
+            font-weight: bold;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            min-width: 6rem;
+            margin-right: 1rem;
+        }
+    }
+}

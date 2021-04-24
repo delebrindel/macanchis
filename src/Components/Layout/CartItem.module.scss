@@ -1,9 +1,42 @@
-.cart__item{
+@use '../../globalStyles/palette' as pal;
+@use '../../globalStyles/breakpoints' as br;
 
-  &__summary{
+.cart__item {
+  list-style: none;
+  border-bottom: 1px solid pal.$light-grey;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  
+  &__summary {
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
+    @include br.media(">=tablet"){
+      width: 60%;
+      display: inline-block;
+    }
+  }
+  
+  &__actions {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    
+    @include br.media(">=tablet"){
+      width: 35%;
+      display: inline-block;
+      text-align: right;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      margin-right: 1rem;
+      border: none;
+      color: pal.$white;
+      background: pal.$secondary-color;
+      font-weight: bold;
+    }
   }
 }
