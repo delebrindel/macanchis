@@ -4,6 +4,7 @@ import Navbar from './Components/Layout/Navbar';
 import Intro from './Components/Layout/Intro';
 import Meals from './Components/Meals/Meals';
 import Cart from './Components/Layout/Cart';
+import Footer from './Components/Layout/Footer';
 
 import CartProvider from './store/CartProvider';
 
@@ -26,6 +27,7 @@ function App() {
         <Intro />
         <Meals />
       </CartProvider>
+      <Footer />
     </div>
   );
 }

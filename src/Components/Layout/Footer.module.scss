@@ -1,0 +1,15 @@
+@use '../../globalStyles/palette' as pal;
+
+.footer{
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  color: pal.$secondary-color;
+
+  a{
+    color: pal.$primary-color-dark;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
