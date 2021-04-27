@@ -4,8 +4,12 @@
   width: 100%;
   text-align: center;
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 0.25rem;
   color: pal.$secondary-color;
+  
+  p{
+    margin-bottom: 0;
+  }
 
   a{
     color: pal.$primary-color-dark;
