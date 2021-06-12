@@ -1,38 +1,66 @@
 @use '../../globalStyles/palette' as pal;
+@use '../../globalStyles/breakpoints' as br;
 
-.cart{
-    &__list{
-        max-height: 400px;
+.cart {
+    &__list {
         overflow-y: scroll;
+        max-height: 250px;
 
-        ul{
+        ul {
             list-style: none;
         }
     }
 
-    &__total{
+    &__total {
         font-weight: bold;
         text-align: right;
         margin: 1rem 1rem;
-        
-        span:nth-child(2){
+
+        span:nth-child(2) {
             font-size: 1.5rem;
             color: pal.$primary-color-dark;
         }
     }
 
-    &__actions{
+    &__actions {
         text-align: center;
         width: 100%;
         padding: 1rem 0;
-        button{
+        .cancel {
+            text-align: center;
+            width: 90%;
+            margin: 1rem 5% 1rem;
+            padding: 0.5em;
+            border: none;
             background: pal.$secondary-color;
             color: pal.$white;
-            font-weight: bold;
-            border-radius: 0.5rem;
-            padding: 0.5rem;
-            min-width: 6rem;
-            margin-right: 1rem;
+            border-radius: 6px;
+            @include br.media(">=768px") {
+                width: 40%;
+                display: inline-block;
+            }
+        }
+        .confirmation {
+            text-align: center;
+            width: 90%;
+            margin: 1rem 5% 0;
+            padding: 0.5em;
+            border: none;
+            background: pal.$primary-color-dark;
+            color: pal.$white;
+            border-radius: 6px;
+            @include br.media(">=768px") {
+                width: 40%;
+                display: inline-block;
+            }
         }
     }
+}
+
+.orderSent {
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+    margin: 2em auto;
+    font-size: 1.5em;
 }

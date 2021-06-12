@@ -1,0 +1,81 @@
+@use '../../globalStyles/palette' as pal;
+@use '../../globalStyles/breakpoints' as br;
+
+.control{
+  text-align: center;
+
+  label{
+    display: block;
+    color: pal.$secondary-color;
+    font-weight: bold;
+    text-align: center;
+    @include br.media(">=768px"){
+      width: 25%;
+      display: inline-block;
+    }
+  }
+  input{
+    width: 85%;
+    padding: 0.5em;
+    border-radius: 6px;
+    border: none;
+    background: #eee;
+    margin-bottom: 0.5em;
+    @include br.media(">=768px"){
+      width: 70%;
+      display: inline-block;
+    }
+  }
+
+  &.invalid{
+    label{
+      color: red;
+      font-weight: bold;
+    }
+    input{
+      border: red 1px solid;
+      background: pink;
+    }
+  }
+}
+
+
+.cancel{
+  text-align: center;
+  width: 90%;
+  margin: 1rem 5% 1rem;
+  padding: 0.5em;
+  border: none;
+  background: pal.$secondary-color;
+  color: pal.$white;
+  border-radius: 6px;
+  @include br.media(">=768px"){
+    width: 40%;
+    display: inline-block;
+  }
+}
+.confirmation{
+  text-align: center;
+  width: 90%;
+  margin: 1rem 5% 0;
+  padding: 0.5em;
+  border: none;
+  background: pal.$primary-color-dark;
+  color: pal.$white;
+  border-radius: 6px;
+  @include br.media(">=768px"){
+    width: 40%;
+    display: inline-block;
+  }
+
+  &:disabled{
+    opacity: 0.3;
+  }
+}
+
+.errorMessage{
+  display: block;
+  font-weight: bold;
+  color: pal.$alert;
+  font-size: 0.7em;
+}
